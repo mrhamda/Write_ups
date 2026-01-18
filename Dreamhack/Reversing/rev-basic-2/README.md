@@ -8,7 +8,7 @@ The objective of this challenge is to find the corrcet key for the program which
 
 ## Program structure (The important part that exists in the main decompiler!)
 
-```
+```c
 
 sub_140001000(void* arg1)
 {
@@ -38,7 +38,7 @@ As we can see **if (data_140003000[var_18] != *(arg1 + var_18))**, it just loops
 
 solve.py
 
-```
+```python
 data = [0x43, 0x6f, 0x6d, 0x70, 0x34, 0x72, 0x65, 0x5f, 0x74, 0x68, 0x65, 0x5f, 0x61, 0x72, 0x72, 0x34, 0x79]
 
 string = ''.join(chr(b) for b in data)

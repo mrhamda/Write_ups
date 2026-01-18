@@ -10,7 +10,7 @@ So the goal of the challenge is that there is 3 stages. The first stage asks for
 
 ## Task 1
 
-```
+```js
 <script>
       async function submitPassword() {
       function _0xce3b(){var _0x148159=['4148163vSdrFC','5725159VzzaPT','2397752ODowZJ','20DlKRcS','24TpyFfD','16748QiSgfp','You\x27re\x20really\x20lucky!\x20Here\x27s\x20my\x20hash\x20as\x20a\x20reward.\x20bf33632dd9668787878890cb4fbb54261b6b7571','366wwxTHU','54915cJlHyP','random','240864NVXXPi','926331SmwYQm','82GgSHPB'];_0xce3b=function(){return _0x148159;};return _0xce3b();}var _0x2f6642=_0x13fd;function _0x13fd(_0x43c31d,_0x101d9b){_0x43c31d=_0x43c31d-0x1d6;var _0xce3b7c=_0xce3b();var _0x13fdee=_0xce3b7c[_0x43c31d];return _0x13fdee;}(function(_0xa859af,_0x4b1369){var _0x3a93af=_0x13fd,_0x167804=_0xa859af();while(!![]){try{var _0x33920e=-parseInt(_0x3a93af(0x1d8))/0x1*(-parseInt(_0x3a93af(0x1de))/0x2)+parseInt(_0x3a93af(0x1d6))/0x3+-parseInt(_0x3a93af(0x1db))/0x4+-parseInt(_0x3a93af(0x1e1))/0x5*(parseInt(_0x3a93af(0x1e0))/0x6)+parseInt(_0x3a93af(0x1d7))/0x7*(parseInt(_0x3a93af(0x1dd))/0x8)+-parseInt(_0x3a93af(0x1d9))/0x9+-parseInt(_0x3a93af(0x1dc))/0xa*(-parseInt(_0x3a93af(0x1da))/0xb);if(_0x33920e===_0x4b1369)break;else _0x167804['push'](_0x167804['shift']());}catch(_0x48c0e9){_0x167804['push'](_0x167804['shift']());}}}(_0xce3b,0x73dd9));Math[_0x2f6642(0x1e2)]()===0x0&&alert(_0x2f6642(0x1df));
@@ -51,7 +51,7 @@ So the goal of the challenge is that there is 3 stages. The first stage asks for
 
 ## Task 2
 
-```
+```js
 
       const ORACLE_KEY = "17_w0Uld_83_V3Ry_fUNnY_1f_y0U_7H0u9H7_7H15_W45_4_Fl49";
 
@@ -93,7 +93,7 @@ So the goal of the challenge is that there is 3 stages. The first stage asks for
 
 ## Task 3 
 
-```
+```js
 
       const statusEl = document.getElementById("status");
 
@@ -191,14 +191,14 @@ So the goal of the challenge is that there is 3 stages. The first stage asks for
 
 ## Task 1
 So the first task was straight forward there was some obfuscated javascript code 
-```
+```js
 function _0xce3b(){var _0x148159=['4148163vSdrFC','5725159VzzaPT','2397752ODowZJ','20DlKRcS','24TpyFfD','16748QiSgfp','You\x27re\x20really\x20lucky!\x20Here\x27s\x20my\x20hash\x20as\x20a\x20reward.\x20bf33632dd9668787878890cb4fbb54261b6b7571','366wwxTHU','54915cJlHyP','random','240864NVXXPi','926331SmwYQm','82GgSHPB'];_0xce3b=function(){return _0x148159;};return _0xce3b();}var _0x2f6642=_0x13fd;function _0x13fd(_0x43c31d,_0x101d9b){_0x43c31d=_0x43c31d-0x1d6;var _0xce3b7c=_0xce3b();var _0x13fdee=_0xce3b7c[_0x43c31d];return _0x13fdee;}(function(_0xa859af,_0x4b1369){var _0x3a93af=_0x13fd,_0x167804=_0xa859af();while(!![]){try{var _0x33920e=-parseInt(_0x3a93af(0x1d8))/0x1*(-parseInt(_0x3a93af(0x1de))/0x2)+parseInt(_0x3a93af(0x1d6))/0x3+-parseInt(_0x3a93af(0x1db))/0x4+-parseInt(_0x3a93af(0x1e1))/0x5*(parseInt(_0x3a93af(0x1e0))/0x6)+parseInt(_0x3a93af(0x1d7))/0x7*(parseInt(_0x3a93af(0x1dd))/0x8)+-parseInt(_0x3a93af(0x1d9))/0x9+-parseInt(_0x3a93af(0x1dc))/0xa*(-parseInt(_0x3a93af(0x1da))/0xb);if(_0x33920e===_0x4b1369)break;else _0x167804['push'](_0x167804['shift']());}catch(_0x48c0e9){_0x167804['push'](_0x167804['shift']());}}}(_0xce3b,0x73dd9));Math[_0x2f6642(0x1e2)]()===0x0&&alert(_0x2f6642(0x1df));
 ```
 
 So what I did was just deobfuscate it using <a href="https://obf-io.deobfuscate.io">Obfuscator.io</a>
 and I got this in return:
 
-```
+```js
 function _0xce3b() {
   var _0x148159 = ['4148163vSdrFC', '5725159VzzaPT', '2397752ODowZJ', '20DlKRcS', '24TpyFfD', '16748QiSgfp', "You're really lucky! Here's my hash as a reward. bf33632dd9668787878890cb4fbb54261b6b7571", '366wwxTHU', '54915cJlHyP', 'random', '240864NVXXPi', '926331SmwYQm', '82GgSHPB'];
   _0xce3b = function () {
@@ -244,7 +244,7 @@ I started accessing the **/api** section for that challenge, because we had the 
 
 That api returned:
 
-```
+```js
 {
   "hmac": "6103b1f33aca71734cbac3b2cc437adbb326366d84868c2a0c7833941ee44089",
   "serverTime": 1766680561
@@ -255,7 +255,7 @@ So what I did was reuse old scripts and fetch the **target hmac** from the api *
 
 solve.py:
 
-```
+```python
 import hmac
 import hashlib
 from concurrent.futures import ThreadPoolExecutor

@@ -9,7 +9,7 @@ The challenge involves a system that leaks modular exponentiations of a rotating
 ## Program structure
 
 Chall.py:
-```
+```python
 from Crypto.Util.number import getPrime, bytes_to_long
 from secret import FLAG
 
@@ -29,7 +29,7 @@ for _ in range(len(FLAG)):
 ```
 
 output.txt:
-```
+```c
 p:  105891552782768273485439811488443354235545023673195353053856843893816480862271
 leak:  74834831693148489075053741970537349864361072646438063822128523522624111096404
 leak:  94637262384206414487913618520407895315549149001067603290715492338419957063638
@@ -75,7 +75,7 @@ The vulnerability stems from the predictable mathematical relationship between c
 ## Solution
 We exploit the mathematical relationship between consecutive flag rotations. The rotation creates a linear relation between integer representations: **x_{i+1} = 256·x_i - K·b_i**, where **K = 256^m - 1** and **b_i** are flag bytes. In the exponent domain, this becomes **h_{i+1} = h_i^{256} · A^{b_i} mod p** with **A = 2^{-K} mod p**. We solve **A^{b_i} = h_{i+1} · h_i^{-256} mod p** for each byte **b_i by brute force (0-255)**. Reconstructing all bytes gives the flag!
 
-```
+```python
 from Crypto.Util.number import long_to_bytes
 
 p = 105891552782768273485439811488443354235545023673195353053856843893816480862271

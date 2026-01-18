@@ -22,7 +22,7 @@ what?
 
 ## Program structure
 
-```
+```go
 package main
 
 import (
@@ -231,11 +231,11 @@ So the problem I encountered was figuring out what to do. Since this was a misc 
 
 The security flaws lies into the use of "**JSON file**" to check if someones is "**admin**" that's because json are "**Case-sensitive**", which is a mismatch between go and json. Go actually uses **"Case-insensitive"** so that means we can easily put admin boolean that will pass the check.  
 
-```
+```go
 IsAdmin  bool   `json:"is-admin"`
 ```
 
-```
+```go
 func validateRegistration(arg string) bool {
     var parsed map[string]any 
     json.Unmarshal([]byte(arg), &parsed)
@@ -253,7 +253,7 @@ func validateRegistration(arg string) bool {
 
 So after some testing I found this:
 
-```
+```go
 case "register":
 			if !validateRegistration(arg) {
 				fmt.Fprintln(conn, "invalid user object, example:\nregister {\"username\":\"thebestuser\",\"password\":\"who stole my schmunguss?\"}")

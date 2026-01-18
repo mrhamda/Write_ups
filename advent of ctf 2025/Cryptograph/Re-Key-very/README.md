@@ -9,7 +9,7 @@ There's basically a **gen.py** script that returns specfic **out.txt**, which wh
 ## Program structure
 
 gen.py:
-```
+```python
 import hashlib
 import fastecdsa.curve
 import random
@@ -90,7 +90,7 @@ this creates a predictable relationship between signatures.
 So we just basically first take the leaks and the p from the **out.txt**.
 The challenge uses ECDSA, where each signature depends on a secret nonce k. In the provided code, the nonce is not random it starts at some value k and is incremented for each signature **(k, k+1, k+2)**. This creates a predictable relationship between signatures and two signatures with related nonces. Then we can set up two equations and solve for the nonce k. Once k is recovered, the private key d is computed directly from the signature formula.
 
-```
+```python
 import hashlib
 from fastecdsa.curve import secp256k1
 

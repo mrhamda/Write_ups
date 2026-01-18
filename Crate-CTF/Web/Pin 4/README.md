@@ -17,7 +17,7 @@ So after doing some investigation in burp suite I found that the vulnerability w
 ## Solution
 So after knowing that the bruteforce will take a lot of time I decided to test random common vulnerabilties on the "**endpoint /checkpin**", using burpsuite.
 First I tested to send 
-```
+```js
 pin=123;ls
 ```
 and it worked!

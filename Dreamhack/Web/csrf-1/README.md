@@ -4,7 +4,7 @@ This challenge is part of the "Web" category and is level 1.
 
 ## Program structure
 
-```
+```python
 #!/usr/bin/python3
 from flask import Flask, request, render_template
 from selenium import webdriver
@@ -119,7 +119,7 @@ To begin with the problem was that they blocked html elements like **script** an
 
 If we look at this endpoint:
 
-```
+```python
 @app.route("/admin/notice_flag")
 def admin_notice_flag():
     global memo_text
@@ -135,7 +135,7 @@ What it does is just check if the request is from **127.0.0.1/admin/notice_flag*
 
 So I combined that with what I explained earlier and made an **CSRF** attack via the **img**:
 
-```
+```html
 <img src = "http://127.0.0.1:8000/admin/notice_flag?userid=admin" >
 ```
 

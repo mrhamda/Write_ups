@@ -8,7 +8,7 @@ The objective of this challenge is to find the corrcet key for the program which
 
 ## Program structure (The important part that exists in the main decompiler!)
 
-```
+```c
 uint64_t sub_140001000(char* arg1)
 {
     int32_t var_18;
@@ -30,7 +30,7 @@ Putting the flag in sight without any encryption.
 ## Solution
 
 We literally can see it clearly 
-```
+```c
 if (strcmp(arg1, "Compar3_the_str1ng"))
         var_18 = 0;
     else

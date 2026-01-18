@@ -18,7 +18,7 @@ After some time investigating I found something really interesting when I logged
 ## Solution
 So my idea was basically to bruteforce the **"JSON WEBTOKEN"** and find the secret key. I also found out when trying to decode the json token is that the payload is in this format:
 
-```
+```js
 {
   "user": "zeke",
   "scopes": [
@@ -40,7 +40,7 @@ queenoftherabbitkillers
 
 Now finally after that we can craft our payload and change our scopes from user to admin. The site I used to decode and encode payload is this **"https://www.jwt.io"**
 
-```
+```js
 {
   "user": "zeke",
   "scopes": [

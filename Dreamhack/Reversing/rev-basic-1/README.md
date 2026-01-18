@@ -8,7 +8,7 @@ The objective of this challenge is to find the corrcet key for the program which
 
 ## Program structure (The important part that exists in the main decompiler!)
 
-```
+```c
 #  if (*param_1 == 'C') {
 #     if (param_1[1] == 'o') {
 #       if (param_1[2] == 'm') {

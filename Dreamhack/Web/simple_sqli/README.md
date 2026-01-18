@@ -8,7 +8,7 @@ The objective of this challenge is to perform **sql injection**
 
 ## Program structure
 
-```
+```python
 #!/usr/bin/python3
 from flask import Flask, request, render_template, g
 import sqlite3
@@ -78,7 +78,7 @@ app.run(host='0.0.0.0', port=8000)
 
 This is bad since the **userid** and the **userpassword** are directly inserted without any input sanitization.
 
-```
+```sql
 res = query_db(f'select * from users where userid="{userid}" and userpassword="{userpassword}"')
 ```
 
@@ -88,13 +88,13 @@ This is bad because it returns without any **sanitization**.
 
 What we will be doing is trying to change this query:
 
-```
+```sql
 f'select * from users where userid="{userid}" and userpassword="{userpassword}"'
 ```
 
 to
 
-```
+```sql
 f'select * from users where userid="admin"'
 ```
 
@@ -104,7 +104,7 @@ You might say how did we know that there is an userid with **admin**?
 
 We knew that from this basic code block:
 
-```
+```python
 if userid == 'admin':
     return f'hello {userid} flag is {FLAG}'
 ```

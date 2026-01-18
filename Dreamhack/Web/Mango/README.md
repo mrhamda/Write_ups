@@ -8,7 +8,7 @@ The objective of this challenge is to find the flag throught **blinds xss** atta
 
 ## Program structure
 
-```
+```js
 const express = require('express');
 const app = express();
 
@@ -62,7 +62,7 @@ app.listen(8000, '0.0.0.0');
 
 This is not doing any filtering for injections that means we can use **[$regex]** if we want.
 
-```
+```js
   db.collection('user').findOne({
         'uid': uid,
         'upw': upw,
@@ -73,7 +73,7 @@ This is not doing any filtering for injections that means we can use **[$regex]*
 
 So what I realized first since they are banning these items **const BAN = ['admin', 'dh', 'admi'];**, that means we need another way to find the flag. The first thing that came to my mind because when we log in as **admin**, the admin text would be displayed. That means if we use **[$regex]** in mongodb then we can bruteforce throught digits and letters and find the flag. What we would be doing is just **blind xss**, where we bruteforce and we check if the letter/digit we added returns **admin**, that means that letter/digit is correct!
 
-```
+```python
 import requests, string
 
 web = 'http://host8.dreamhack.games:19365/'

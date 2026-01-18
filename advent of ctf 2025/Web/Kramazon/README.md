@@ -14,7 +14,7 @@ Auth=BA4FBg%3D%3D
 
 Script.js:
 
-```
+```js
 document.addEventListener("DOMContentLoaded", function () {
   // Hero Slider Logic
   const slides = document.querySelectorAll(".slide");
@@ -140,7 +140,7 @@ The server mapped cookie values directly to user IDs without proper authenticati
 
 So what we want is to be **Santa** and we can do that by being the user with id of **1** here's the code snippet that defines that:
 
-```
+```js
  if (status.internal.user === 1) {
         alert("Welcome, Santa! Allowing priority finalize...");
 }
@@ -148,7 +148,7 @@ So what we want is to be **Santa** and we can do that by being the user with id 
 
 So since we know that the id is from the auth and that it is **b64 encoded**, we gotta try setting some numbers in base64 and then sending it to the **finalize endpoint**. I kept doing that from the number 0 up to the number 6 using **cyberchef** and number 6 gave me a strange result. From the curl command I ran I got this in return:
 
-```
+```js
 Testing cookie: Bg==
 Result: {'success': True, 'privileged': True, 'message': 'Order finalized with Santa-level priority!', 'internal_route': '/priority/manifest/route-2025-SANTA.txt', 'flag_hint': 'flag{npld_async_cookie_'}
 ```

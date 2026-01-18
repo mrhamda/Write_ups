@@ -6,7 +6,7 @@ This challenge is part of the "Web" category and is worth 500 points.
 
 So when we visit the website we are to just input something but when we make a short fuzz test, we get this in return:
 
-```
+```js
 ┌──(venv)(abdullah㉿Abdullah)-[/mnt/d/chals/web/JSFS]
 └─$ nc ssmarkiv.ctfchall.se 40033
 $ ewa

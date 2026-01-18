@@ -8,7 +8,7 @@ The objective of this challenge is to login as admin via the admin's session_ID 
 
 ## Program structure
 
-```
+```python
 
 #!/usr/bin/python3
 from flask import Flask, request, render_template, make_response, redirect, url_for
@@ -89,7 +89,7 @@ if __name__ == '__main__':
 
 ## Vulnerability
 
-```
+```python
 @app.route('/admin')
 def admin():
     # developer's note: review below commented code and uncomment it (TODO)
